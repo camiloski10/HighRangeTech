@@ -97,6 +97,7 @@
 
 
 <script>
+  document.getElementById('exampleModalLabel').innerText = "Actualizar Pais";
   function seleccionaPais(id, tp) {
     if (tp == 2) {
       dataURL = "<?php echo base_url('/paises/buscar_Pais'); ?>" + "/" + id;
@@ -104,7 +105,8 @@
         type: "POST",
         url: dataURL,
         dataType: "json",
-        success: function(rs) {        
+        success: function(rs) {  
+          document.getElementById('exampleModalLabel').innerText = "Actualizar Pais";
           $("#tp").val(2);  
           $("#id").val(rs[0]['id'])  
           $("#codigo").val(rs[0]['codigo']);

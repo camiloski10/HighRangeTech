@@ -35,7 +35,7 @@ class PaisesModel extends Model
     public function obtenerPaisesEliminados()
     {
         $this->select('paises.*');
-        $this->where('estado', 'I');
+        $this->where('estado', 'E');
         $datos = $this->findAll();
         return $datos;
     }

@@ -29,7 +29,7 @@ class Paises extends BaseController
         if (!$eliminados) {
            echo view('/errors/html/no_eliminados');
         } else {
-        $data = ['titulo' => 'Administrar Paises', 'nombre' => 'Darell E', 'datos' => $eliminados];
+        $data = ['titulo' => 'Administrar Paises', 'nombre' => 'Camilo', 'datos' => $eliminados];
         echo view('/principal/header', $data);
         echo view('/paises/eliminados', $data);
         }
@@ -50,7 +50,7 @@ class Paises extends BaseController
         
     
         $datos_actualizados = [
-            'estado' => 'I'
+            'estado' => 'E'
         ];
     
         $this->pais->update($id, $datos_actualizados); // Actualizar registro
