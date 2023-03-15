@@ -23,7 +23,7 @@
                 <?php foreach ($datos as $x => $valor) { ?>
                         <tr>
                             <th class="text-center"><?php echo $valor['id']; ?></th>
-                            <th class="text-center">+<?php echo $valor['codigo']; ?></th>
+                            <th class="text-center">+<?php echo $valor['Codigo']; ?></th>
                             <th class="text-center"><?php echo $valor['nombre']; ?></th>
                             <th class="text-center"><?php echo $valor['estado']; ?></th>
                             <th class="grid grid text-center" colspan="2">

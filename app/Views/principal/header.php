@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>Cuentas Claras</title>
+    <title>High Range TECH</title>
     <link rel="icon" type="ima  ge/svg+xml" href="<?php echo base_url() ?>/favicon.ico" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="<?php echo base_url() ?>/css/header.css">
@@ -19,7 +19,7 @@
 
 <header class="containerH">
   <a href="<?php echo base_url();?>" class="logosena">
-    <img src="<?php echo base_url(); ?>img/cuentasclaras.png" alt="" class="">
+    <img src="<?php echo base_url(); ?>img/highrangetech.png" alt="" class="">
   </a>
   
     <div class="titulo">

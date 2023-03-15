@@ -10,7 +10,7 @@ class Principal extends BaseController
     {}
         public function index() 
         {            
-            $data = ['titulo' => 'Proyecto Cuentas Claras','nombre'=>'Greed']; // le asignamos a la variable data, que es la que interactua con la vista, los datos obtenidos del modelo, ademas de enviarle una variable titulo para el reporte.
+            $data = ['titulo' => 'High Range TECH','nombre'=>'Camilo']; // le asignamos a la variable data, que es la que interactua con la vista, los datos obtenidos del modelo, ademas de enviarle una variable titulo para el reporte.
 
             echo view('/principal/header', $data);
             

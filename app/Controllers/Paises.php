@@ -17,7 +17,7 @@ class Paises extends BaseController
     {
         $pais = $this->pais->obtenerPaises();
 
-        $data = ['titulo' => 'Administrar Paises', 'nombre' => 'Darell E', 'datos' => $pais];
+        $data = ['titulo' => 'Administrar Paises', 'nombre' => 'Camilo', 'datos' => $pais];
         echo view('/principal/header', $data);
         echo view('/paises/paises', $data);
     }

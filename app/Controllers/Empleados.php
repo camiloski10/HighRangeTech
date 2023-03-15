@@ -25,7 +25,7 @@ class Empleados extends BaseController
         $municipios = $this->municipios->obtenerMunicipios();
         $cargos = $this->cargos->obtenerCargos();
 
-        $data = ['titulo' => 'Administrar Empleados', 'nombre' => 'Darell E', 'datos' => $empleados, 'municipios' => $municipios, 'cargos' => $cargos];
+        $data = ['titulo' => 'Administrar Empleados', 'nombre' => 'Camilo', 'datos' => $empleados, 'municipios' => $municipios, 'cargos' => $cargos];
         echo view('/principal/header', $data);
         echo view('/empleados/empleados', $data);
     }
