@@ -134,7 +134,8 @@
         url: dataURL,
         dataType: "json",
         success: function(rs) {        
-          $("#id").val(rs[0]['id'])  
+          $("#idE").val(rs[0]['id'])  
+          $("#estado").val('E');
           $("#PaisEliminar").text(rs[0]['nombre']);
           $("#PaisModalElimiar").modal("show");
         }

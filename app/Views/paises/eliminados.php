@@ -67,7 +67,8 @@
         type: "POST",
         url: dataURL,
         dataType: "json",
-        success: function(rs) {        
+        success: function(rs) {    
+          console.log(rs[0]['nombre'])    
           $("#id").val(rs[0]['id'])  
           $("#PaisEliminar").text(rs[0]['nombre']);
           $("#Restaurar").modal("show");

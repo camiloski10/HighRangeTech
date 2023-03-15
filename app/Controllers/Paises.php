@@ -37,50 +37,22 @@ class Paises extends BaseController
 
 
     }
-    public function cambiarEstado($id)
+    public function cambiarEstado()
     {
-        $registro = $this->pais->find($id); // Buscar registro a actualizar
-    
-        if (!$registro) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('No se encontró el registro solicitado.');
-        }
-    
-        // Cambiar valor del campo "estado"
-        $estado_actual = $registro['estado'];
-        
-    
-        $datos_actualizados = [
-            'estado' => 'E'
-        ];
-    
-        $this->pais->update($id, $datos_actualizados); // Actualizar registro
+        $this->pais->update($this->request->getPost('id'), [
+            'estado' => $this->request->getPost('estado')
+        ]);
     
         return redirect()->to(base_url('/paises'));
     }
-    public function Restaurar($id)
+    public function Restaurar()
     {
-        $eliminados = $this->eliminados->obtenerPaisesEliminados();
-        $registro = $this->pais->find($id); // Buscar registro a actualizar
-    
-        if (!$registro) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('No se encontró el registro solicitado.');
-        }
-    
-        // Cambiar valor del campo "estado"
-        $estado_actual = $registro['estado'];
+        $this->pais->update($this->request->getPost('id'),[
+            'estado' => $this->request->getPost('estado')
+        ]);
+        return redirect()->to(base_url('/paises/eliminados'));
+           
         
-    
-        $datos_actualizados = [
-            'estado' => 'A'
-        ];
-    
-        $this->pais->update($id, $datos_actualizados); // Actualizar registro
-        
-        if(!$eliminados){
-           return redirect()->to(base_url('/paises/eliminados'));
-        }else{
-            return redirect()->to(base_url('/paises'));
-        }
         
     }
     public function buscar_Pais($id)
